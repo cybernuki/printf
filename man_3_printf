@@ -11,15 +11,30 @@ holberton [Aura Marina Pasmin]
 
 .SH DESCRIPTION
 based on a holberton school software school project
-.PP
+.B FORMAT
 
-.br
+\\" double quote
 
-.SH FILES
+\\\\ backsslash
+
+\\n new line
+
+%% a single %
+
+%c
+
+%s
+
+%d
+
+%i
+
+.SH FILES`
 
 .SH SEE ALSO
 
 .SH BUGS
+We do not know any bug in this function if you find one please contacted.
 
 .SH AUTHOR
-Jhonathan Arenas, Aura Pasmin
+Written by Jhonathan Arenas[https://github.com/cybernuki][], Aura Pasmin[https://github.com/auraPasmin][]
