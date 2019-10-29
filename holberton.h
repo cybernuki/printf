@@ -7,13 +7,14 @@
 
 
 /**
- * strucut specifiers - all the current specifiers implemented
+ * specifiers - all the current specifiers implemented
  * @specifier: are the current specifiers
  * @f: correspond to a new
  */
-typedef struct specifier {
-        char letter;
-        int (*f)(va_list);
+typedef struct specifier
+{
+	char letter;
+	int (*f)(va_list);
 } specifier;
 
 int _printf(const char *format, ...);
@@ -23,6 +24,6 @@ int format_s(va_list arg);
 int format_c(va_list arg);
 int format_i(va_list arg);
 int format_d(va_list arg);
-int  _putchar ( char c);
+int  _putchar(char c);
 
 #endif

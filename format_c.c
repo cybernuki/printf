@@ -1,5 +1,10 @@
 #include "holberton.h"
-int format_c (va_list arg)
+/**
+  * format_c - return the format character
+  * @arg:is the argument
+  * Return: retur the character or 1
+  */
+int format_c(va_list arg)
 {
 	char chr;
 
