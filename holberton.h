@@ -21,6 +21,8 @@ int _printf(const char *format, ...);
 int formating(const char *p, int *index, va_list arg);
 int format_s(va_list arg);
 int format_c(va_list arg);
+int format_i(va_list arg);
+int format_d(va_list arg);
 int  _putchar ( char c);
 
 #endif
