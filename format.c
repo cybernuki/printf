@@ -52,7 +52,7 @@ int formating (const char *p, int *index, va_list arg)
                     //if it is, do the format and send to buffe
                 *index = *index + 1;
                 //Buffering
-                return(spec[j].f);
+                return(spec[j].f(arg));
             }
             j++;
         }
