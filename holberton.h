@@ -10,14 +10,15 @@
  * @specifier: are the current specifiers
  * @f: correspond to a new
  */
-typedef struct specifiers
-{
-	char *specifier;
-} specifiers;
+typedef struct specifier {
+        char letter;
+        int (*f)(va_list);
+} specifier;
 
-int formating(const char *p, int *index, specifiers specs, va_list arg);
+int _printf(const char *format, ...);
+
+int formating(const char *p, int *index, va_list arg);
 int format_s(va_list arg);
 int format_c(va_list arg);
 
-int _printf(const char *format, ...);
 #endif
