@@ -13,8 +13,8 @@ int formating (const char *p, int *index, va_list arg)
     (void) (arg);
    //Formats format_factory
    specifier spec[] = {
-        {'c', NULL},
-        {'s', NULL},
+        {'c', int format_c},
+        {'s', int format_s},
         {'\0', NULL}
     };
 
@@ -53,7 +53,7 @@ int formating (const char *p, int *index, va_list arg)
                     //if it is, do the format and send to buffe
                 *index = *index + 1;
                 //Buffering
-                return(write (1, p + start, *index - start ));
+                return((spec[j].f));
             }
             j++;
         }
