@@ -10,55 +10,62 @@
 int formating (const char *p, int *index, va_list arg)
 {
     int j, start = *index;
-   //Formats format_factory
+    /*  format_factory */
    specifier spec[] = {
         {'c', format_c},
         {'s', format_s},
 	{'i', format_i},
 	{'d', format_d},
         {'\0', NULL}
-   };
-   //si no es formato
-   if (p[*index] != '%')
-   {
-	   //buscar donde termina el substring
-	   while (p[*index] != '%' && p[*index] != '\0')
-	   {
-		   *index = *index + 1;
-	   }
-	   return (write (1, p + start, *index - start));
-   }
-   // Es cuando es el format %%
-   *index = *index + 1;
-   if (p[*(index)] == '%')
-   {
-	   //Send to buffer the %
-	   *index = *index + 1;
-	   return (write (1, p + start, *index - start));
-   }
-   //Cuando empiezan con %
-   if (p[*index] != '\0')
-   {
-	   j = 0;
-	   while (spec[j].letter != '\0')
-	   {
-		   if (p[*index] == spec[j].letter)
-		   {
-			   //Verify if this is a format
-			   //if it is, do the format and send to buffe
-			   *index = *index + 1;
-			   //Buffering
-			   return (spec[j].f(arg));
-		   }
-		   j++;
-	   }
-	   *index = *index + 1;
-   }
-   //if that substring is not a format, send to buffer
-   //buscar donde termina el substring
-   while (p[*index] != '%' && p[*index] != '\0')
-   {
-	   *index = *index + 1;
-   }
-   return (write (1, p + start, *index - start));
+    };
+
+
+   /* si no es formato */
+    if (p[*index] != '%')
+    {
+	    /* buscar donde termina el substring */
+        while (p[*index] != '%' && p[*index] != '\0')
+        {
+            *index = *index + 1;
+        }
+
+        return (write(1, p + start, *index - start));
+    }
+    /* Es cuando es el format %% */
+    *index = *index + 1;
+    if (p[*(index)] == '%')
+    {
+	    /* Send to buffer the % */
+
+        *index = *index + 1;
+	return(write (1, p + start, *index - start));
+    }
+
+    /* Cuando empiezan con % */
+    if (p[*index] != '\0')
+    {
+        j = 0;
+        while (spec[j].letter != '\0')
+        {
+            if (p[*index] == spec[j].letter)
+            {
+
+		    /* Verify if this is a format */
+                    /* if it is, do the format and send to buffer */
+                *index = *index + 1;
+                /* Buffering */
+                return(spec[j].f(arg));
+            }
+            j++;
+        }
+
+        *index = *index + 1;
+    }
+    /* if that substring is not a format, send to buffer */
+    /* buscar donde termina el substring */
+        while (p[*index] != '%' && p[*index] != '\0')
+        {
+            *index = *index + 1;
+        }
+    return(write (1, p + start, *index - start));
 }

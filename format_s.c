@@ -6,9 +6,10 @@
   */
 int format_s(va_list arg)
 {
-	(void) arg;
 	int i;
-	char *str = va_arg(arg, char*);
+	char *str;
+
+	str = va_arg(arg, char*);
 
 	if (str == NULL)
 		return (-1);

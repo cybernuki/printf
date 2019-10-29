@@ -6,7 +6,9 @@
  */
 int format_d(va_list arg)
 {
-	int d = va_arg(arg, int);
+	int d;
 
+	d = va_arg(arg, int);
+	
 	return (d);
 }
