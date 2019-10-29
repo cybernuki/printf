@@ -12,8 +12,10 @@ int formating (const char *p, int *index, va_list arg)
     int j, start = *index;
     /*  format_factory */
    specifier spec[] = {
-        {'c',format_c},
-        {'s',format_s},
+        {'c', format_c},
+        {'s', format_s},
+	{'i', format_i},
+	{'d', format_d},
         {'\0', NULL}
     };
 
