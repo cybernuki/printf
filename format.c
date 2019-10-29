@@ -10,7 +10,6 @@
 int formating (const char *p, int *index, va_list arg)
 {
     int j, start = *index;
-    (void) (arg);
    //Formats format_factory
    specifier spec[] = {
         {'c',format_c},
@@ -53,7 +52,7 @@ int formating (const char *p, int *index, va_list arg)
                     //if it is, do the format and send to buffe
                 *index = *index + 1;
                 //Buffering
-                return((spec[j].f));
+                return(spec[j].f);
             }
             j++;
         }
