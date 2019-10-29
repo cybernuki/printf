@@ -33,7 +33,6 @@ int formating (const char *p, int *index, va_list arg)
         return (write(1, p + start, *index - start));
     }
     /* Es cuando es el format %% */
-    
     if (p[*index + 1] == '\0')
     {
 	    *index = *index + 1;
