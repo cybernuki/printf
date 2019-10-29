@@ -1,6 +1,7 @@
 #include "holberton.h"
 /**
- *  subformat -it finds a substring that start with % and finish with a specifier
+ *  subformat -it finds a substring that start with %
+ *  and finish with a specifier
  *  and evaluates if it is a format
  *  @p: is the string that start in a % char
  *  @index: is the adress of the external index
@@ -32,6 +33,13 @@ int formating (const char *p, int *index, va_list arg)
         return (write(1, p + start, *index - start));
     }
     /* Es cuando es el format %% */
+    
+    if (p[*index + 1] == '\0')
+    {
+	    *index = *index + 1;
+	    return (-1);
+    }
+
     *index = *index + 1;
     if (p[*(index)] == '%')
     {
