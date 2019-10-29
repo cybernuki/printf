@@ -1,6 +1,7 @@
 #include "holberton.h"
 int format_s(va_list arg)
 {
+	(void) arg;
 //	int str = 0,i;
 //	char *str = va_arg(arg, char*);
 //	if (str == NULL)
