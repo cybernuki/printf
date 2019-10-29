@@ -4,6 +4,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
 /**
  * strucut specifiers - all the current specifiers implemented
@@ -20,5 +21,6 @@ int _printf(const char *format, ...);
 int formating(const char *p, int *index, va_list arg);
 int format_s(va_list arg);
 int format_c(va_list arg);
+int  _putchar ( char c);
 
 #endif
