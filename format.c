@@ -36,9 +36,9 @@ int formating (const char *p, int *index, va_list arg)
     if (p[*(index)] == '%')
     {
 	    /* Send to buffer the % */
-
-        *index = *index + 1;
-	return(write (1, p + start, *index - start));
+	    int tmp = write (1, p + start, *index - start);
+	    *index = *index + 1;
+	    return(tmp);
     }
 
     /* Cuando empiezan con % */
