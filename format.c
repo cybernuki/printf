@@ -13,8 +13,8 @@ int formating (const char *p, int *index, va_list arg)
     (void) (arg);
    //Formats format_factory
    specifier spec[] = {
-        {'c', int format_c},
-        {'s', int format_s},
+        {'c',format_c},
+        {'s',format_s},
         {'\0', NULL}
     };
 
