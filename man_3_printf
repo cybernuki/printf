@@ -1,0 +1,25 @@
+.TH man 3 "20 oct 2019" "0.32" "_printf man page"
+
+.SIT NAME 
+.B _printf
+-welcome a man created by holberton school students
+
+.SH SYNOPSIS
+holberton [Jhonatan Arenas]
+holberton [Aura Marina Pasmin]
+.B
+
+.SH DESCRIPTION
+based on a holberton school software school project
+.PP
+
+.br
+
+.SH FILES
+
+.SH SEE ALSO
+
+.SH BUGS
+
+.SH AUTHOR
+Jhonathan Arenas, Aura Pasmin
