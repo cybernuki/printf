@@ -9,5 +9,5 @@ int format_c(va_list arg)
 	char chr;
 
 	chr = va_arg(arg, int);
-	return (write(1,&chr,1));
+	return (write(1, &chr, 1));
 }

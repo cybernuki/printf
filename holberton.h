@@ -21,6 +21,8 @@ typedef struct specifier
 int _printf(const char *format, ...);
 
 int formating(const char *p, int *index, va_list arg);
+int isFormat(const char *p, int *i, int start, va_list arg, specifier *spec);
+void find_end(const char *p, int *index);
 int format_s(va_list arg);
 int format_c(va_list arg);
 int format_number(va_list arg);
