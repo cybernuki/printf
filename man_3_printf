@@ -29,7 +29,13 @@ based on a holberton school software school project
 
 %i
 
-.SH FILES`
+.SH FILES
+.Bl format_c.c
+.It _printf.c
+FILE_1 description
+.It Pa /Users/joeuser/Library/really_long_file_name
+FILE_2 description
+.El 
 
 .SH SEE ALSO
 
