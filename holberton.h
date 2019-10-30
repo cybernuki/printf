@@ -7,9 +7,10 @@
 
 
 /**
- * specifiers - all the current specifiers implemented
- * @specifier: are the current specifiers
+ * struct specifier - all the current specifiers implemented
+ * @letter: are the current specifiers
  * @f: correspond to a new
+ * @ Return: nothing is a struct
  */
 typedef struct specifier
 {
