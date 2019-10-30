@@ -15,8 +15,8 @@ int formating (const char *p, int *index, va_list arg)
    specifier spec[] = {
         {'c', format_c},
         {'s', format_s},
-	{'i', format_i},
-	{'d', format_d},
+	{'i', format_number},
+	{'d', format_number},
         {'\0', NULL}
     };
 

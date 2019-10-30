@@ -4,7 +4,7 @@
  * @arg: is the argument
  * Return: i
  */
-int format_d(va_list arg)
+int format_number(va_list arg)
 {
 	int n, i, power;
 
