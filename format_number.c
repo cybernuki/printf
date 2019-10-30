@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * format_d - is the forman by %d
+ * format_number - is the forman by %d
  * @arg: is the argument
  * Return: i
  */
