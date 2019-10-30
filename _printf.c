@@ -1,8 +1,8 @@
 #include "holberton.h"
-/*
- *
- *
- *
+/**
+ * _printf - it prints a string with its corresponding format
+ * @format: is the normal text.
+ * Return: how many bytes it could print
  */
 int _printf(const char *format, ...)
 {
