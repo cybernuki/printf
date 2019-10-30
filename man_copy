@@ -1,0 +1,70 @@
+.TH man 3 "20 oct 2019" "Holberton 10 cohort 1.0" "_printf man page"
+
+.SIT NAME 
+.B _printf
+-welcome a man created by holberton school students
+
+.SH SYNOPSIS
+holberton [Jhonatan Arenas]
+holberton [Aura Marina Pasmin]
+.PP
+\fB#include "holberton.h"\fP
+.PP
+\fBint _printf(const char *format, ...);\fP
+.DE
+.B
+
+.SH DESCRIPTION
+based on a holberton school software school project.
+.PP
+.PP
+The printf () function writes the output in the output stream, This function writes the output under the control of a format.
+.PP
+.B Conversion specifiers
+.PP
+.B d, i 
+.PP
+The int argument is converted to signed decimal.
+if there is, give the minimum number of digits that should appear; If the converted value requires fewer digits.
+When 0 is printed with an explicit precision 0, the output is empty.
+.PP
+.B c
+.PP
+If there is no l modifier, the int argument is converted to
+an unsigned character and the resulting character is written.
+If it is null, it goes out.(Exit)
+.PP
+.B s
+.PP
+the const char * argument is expected to be a pointer to an array of character types (char);
+.PP
+.B (pointer to a string).
+.PP
+The characters in the array are written up to and without taking a null byte ('\ 0'). The array must contain a byte ending null ('\ 0').
+.PP
+
+.B FORMAT
+
+\\" double quote
+
+\\\\ backsslash
+
+\\n new line
+
+%% a single %
+
+.SH FILES
+.Bl format_c.c
+.It _printf.c
+FILE_1 description
+.It Pa /Users/joeuser/Library/really_long_file_name
+FILE_2 description
+.El 
+
+.SH SEE ALSO
+
+.SH BUGS
+We do not know any bug in this function if you find one please contacted.
+
+.SH AUTHOR
+Written by Jhonathan Arenas[https://github.com/cybernuki][], Aura Pasmin[https://github.com/auraPasmin][]
