@@ -8,47 +8,37 @@
  *  @specs: are the current implemented specifiers
  *  Return: how many bytes it could print
  */
-int formating (const char *p, int *index, va_list arg)
+int formating(const char *p, int *index, va_list arg)
 {
-    int j, start = *index;
-    /*  format_factory */
-   specifier spec[] = {
+	int j, start = *index;
+   
+	specifier spec[] = {
         {'c', format_c},
         {'s', format_s},
 	{'i', format_number},
 	{'d', format_number},
         {'\0', NULL}
     };
-
-
-   /* si no es formato */
-    if (p[*index] != '%')
+	if (p[*index] != '%')
     {
-	    /* buscar donde termina el substring */
-        while (p[*index] != '%' && p[*index] != '\0')
-        {
+	    while (p[*index] != '%' && p[*index] != '\0')
+	    {
             *index = *index + 1;
         }
-
-        return (write(1, p + start, *index - start));
+	    return (write(1, p + start, *index - start));
     }
-    /* Es cuando es el format %% */
-    if (p[*index + 1] == '\0')
+	if (p[*index + 1] == '\0')
     {
 	    *index = *index + 1;
 	    return (-1);
     }
-
-    *index = *index + 1;
+	*index = *index + 1;
     if (p[*(index)] == '%')
     {
-	    /* Send to buffer the % */
 	    int tmp = write (1, p + start, *index - start);
 	    *index = *index + 1;
 	    return(tmp);
     }
-
-    /* Cuando empiezan con % */
     if (p[*index] != '\0')
     {
         j = 0;
@@ -56,23 +46,17 @@ int formating (const char *p, int *index, va_list arg)
         {
             if (p[*index] == spec[j].letter)
             {
-
-		    /* Verify if this is a format */
-                    /* if it is, do the format and send to buffer */
-                *index = *index + 1;
-                /* Buffering */
-                return(spec[j].f(arg));
+		    *index = *index + 1;
+		    return(spec[j].f(arg));
             }
             j++;
         }
 
         *index = *index + 1;
     }
-    /* if that substring is not a format, send to buffer */
-    /* buscar donde termina el substring */
-        while (p[*index] != '%' && p[*index] != '\0')
+    while (p[*index] != '%' && p[*index] != '\0')
         {
             *index = *index + 1;
         }
-    return(write (1, p + start, *index - start));
+    return (write (1, p + start, *index - start));
 }
